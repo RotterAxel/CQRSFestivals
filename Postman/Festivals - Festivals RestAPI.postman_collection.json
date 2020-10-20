@@ -1,0 +1,2023 @@
+{
+	"info": {
+		"_postman_id": "35f77ca5-87d2-4f92-b534-14dd8eb2acc9",
+		"name": "Festivals - Festivals RestAPI",
+		"description": "Search for and find your favourite Medieval Festivals in Europe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/festivals",
+			"item": [
+				{
+					"name": "Get Festivals",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "14d31055-36b9-4d4c-a111-c2b42493dcbd",
+								"exec": [
+									"pm.test(\"Response time must be below 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response should contain X-Pagination Header\", function() {\r",
+									"    pm.response.to.have.header('X-Pagination');\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/festivals?PageSize=45",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"festivals"
+							],
+							"query": [
+								{
+									"key": "SearchQuery",
+									"value": "<string>",
+									"disabled": true
+								},
+								{
+									"key": "PageNumber",
+									"value": "<integer>",
+									"disabled": true
+								},
+								{
+									"key": "PageSize",
+									"value": "45"
+								},
+								{
+									"key": "OrderBy",
+									"value": "<string>",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/festivals?SearchQuery=<string>&PageNumber=<integer>&PageSize=<integer>&OrderBy=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"festivals"
+									],
+									"query": [
+										{
+											"key": "SearchQuery",
+											"value": "<string>"
+										},
+										{
+											"key": "PageNumber",
+											"value": "<integer>"
+										},
+										{
+											"key": "PageSize",
+											"value": "<integer>"
+										},
+										{
+											"key": "OrderBy",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Get Festivals Pagination Header",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5c83851d-d48f-4943-89fb-930e689bbaaa",
+								"exec": [
+									"pm.test(\"Response time must be below 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response should contain X-Pagination Header\", function() {\r",
+									"    pm.response.to.have.header('X-Pagination');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "HEAD",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/festivals",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"festivals"
+							],
+							"query": [
+								{
+									"key": "SearchQuery",
+									"value": "<string>",
+									"disabled": true
+								},
+								{
+									"key": "PageNumber",
+									"value": "<integer>",
+									"disabled": true
+								},
+								{
+									"key": "PageSize",
+									"value": "<integer>",
+									"disabled": true
+								},
+								{
+									"key": "OrderBy",
+									"value": "<string>",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "HEAD",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/festivals?SearchQuery=<string>&PageNumber=<integer>&PageSize=<integer>&OrderBy=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"festivals"
+									],
+									"query": [
+										{
+											"key": "SearchQuery",
+											"value": "<string>"
+										},
+										{
+											"key": "PageNumber",
+											"value": "<integer>"
+										},
+										{
+											"key": "PageSize",
+											"value": "<integer>"
+										},
+										{
+											"key": "OrderBy",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Get Festival",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ff25211a-e4ea-4d48-bbb3-a91c9489fd72",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "bfcf2ec6-2f16-4f0e-ad51-4b2ccdc520b0",
+								"exec": [
+									"pm.test(\"Response time must be below 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/festivals/:festivalId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"festivals",
+								":festivalId"
+							],
+							"variable": [
+								{
+									"key": "festivalId",
+									"value": "1",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "<string>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/festivals/:festivalId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"festivals",
+										":festivalId"
+									],
+									"variable": [
+										{
+											"key": "festivalId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "GetFestival (vnd.mimo)",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "01be891b-30a7-4b2b-a078-53775aeef9ea",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "b8aec1ae-d2af-4ad4-9b23-4457aeb2664e",
+								"exec": [
+									"pm.test(\"Response time must be below 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.mimo.festival.full+json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/festivals/:festivalId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"festivals",
+								":festivalId"
+							],
+							"variable": [
+								{
+									"description": "(Required) ",
+									"key": "festivalId",
+									"value": "9"
+								}
+							]
+						},
+						"description": "application/vnd.mimo.festival.full+json"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "<string>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/festivals/:festivalId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"festivals",
+										":festivalId"
+									],
+									"variable": [
+										{
+											"key": "festivalId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "GetFestival (festival not exists)",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "52ed0068-ddd8-4878-aa86-a85bd1940de1",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "b7746f01-0afa-4ba9-a914-f5395848f020",
+								"exec": [
+									"pm.test('Should return Not Found 404', function () {\r",
+									"    pm.expect(pm.response.code).to.be.equal(404);\r",
+									"    pm.expect(pm.response.status).to.be.equal('Not Found');\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/festivals/:festivalId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"festivals",
+								":festivalId"
+							],
+							"variable": [
+								{
+									"description": "(Required) ",
+									"key": "festivalId",
+									"value": "1000"
+								}
+							]
+						},
+						"description": "application/vnd.mimo.festival.full+json"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "<string>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/festivals/:festivalId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"festivals",
+										":festivalId"
+									],
+									"variable": [
+										{
+											"key": "festivalId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "GetFestival (Wrong Accept Header) (shoud fail)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7c3c079f-fc48-47b6-adcc-15e85d028951",
+								"exec": [
+									"pm.test('Should return Bad Request 400', function () {\r",
+									"    pm.expect(pm.response.code).to.be.equal(406);\r",
+									"    pm.expect(pm.response.status).to.be.equal('Not Acceptable');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/festivals/:festivalId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"festivals",
+								":festivalId"
+							],
+							"variable": [
+								{
+									"key": "festivalId",
+									"value": "9",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "<string>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/festivals/:festivalId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"festivals",
+										":festivalId"
+									],
+									"variable": [
+										{
+											"key": "festivalId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Create Festival",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "961d6050-c876-44c9-8cf5-293530aa5e88",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "ce0f973b-4edf-4d3a-9cb4-128feb28a147",
+								"exec": [
+									"pm.test(\"Response time must be below 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 201 Created\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response should Content-Type application/vnd.mimo.festival.full+json Header\", function() {\r",
+									"    pm.response.to.have.header('Content-Type');\r",
+									"    pm.expect(pm.response.headers.get('Content-Type')).to.have.string('application/vnd.mimo.festival.full+json; charset=utf-8');\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.mimo.festivalforcreation+json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.mimo.festival.full+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\": {\n        \"country\": \"Germany\",\n        \"number\": \"4\",\n        \"postalCode\": \"20212\",\n        \"state\": \"Bremen\",\n        \"street\": \"This Street\",\n        \"street2\": \"\"\n    },\n    \"endDate\": \"{{current_timestamp_plus_three_days}}\",\n    \"startDate\": \"{{current_timestamp}}\",\n    \"title\": \"Create a new fest\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/festivals",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"festivals"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"adress\": {\n        \"country\": \"<string>\",\n        \"number\": \"<string>\",\n        \"postalCode\": \"<string>\",\n        \"state\": \"<string>\",\n        \"street\": \"<string>\",\n        \"street2\": \"<string>\",\n        \"latitude\": \"<float>\",\n        \"longitude\": \"<float>\",\n        \"rowVersion\": \"<dateTime>\"\n    },\n    \"endDate\": \"<dateTime>\",\n    \"startDate\": \"<dateTime>\",\n    \"title\": \"<string>\",\n    \"description\": \"<string>\",\n    \"website\": \"<string>\",\n    \"rowVersion\": \"<dateTime>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/festivals",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"festivals"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"endDate\": \"<dateTime>\",\n \"startDate\": \"<dateTime>\",\n \"title\": \"<string>\",\n \"id\": \"<integer>\",\n \"description\": \"<string>\",\n \"website\": \"<string>\",\n \"rowVersion\": \"<dateTime>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Festival (End Date before Start Date)",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "1128593b-eda3-4a67-946c-7cb4cccd7c1a",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "2cbb114d-a61e-4ef8-903c-f0f8eaad1ac6",
+								"exec": [
+									"pm.test(\"Status code is 422 Unprocessable Entity\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"    pm.expect(pm.response.status).to.be.equal('Unprocessable Entity');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains Start date must happen earlier than the end date validation message\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Start date must happen earlier than the end date.\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.mimo.festivalforcreation+json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/vnd.mimo.festival.full+json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\": {\n        \"country\": \"Germany\",\n        \"number\": \"4\",\n        \"postalCode\": \"20212\",\n        \"state\": \"Bremen\",\n        \"street\": \"This Street\",\n        \"street2\": \"\"\n    },\n    \"endDate\": \"{{current_timestamp}}\",\n    \"startDate\": \"{{current_timestamp_plus_three_days}}\",\n    \"title\": \"Create a new fest\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/festivals",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"festivals"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"adress\": {\n        \"country\": \"<string>\",\n        \"number\": \"<string>\",\n        \"postalCode\": \"<string>\",\n        \"state\": \"<string>\",\n        \"street\": \"<string>\",\n        \"street2\": \"<string>\",\n        \"latitude\": \"<float>\",\n        \"longitude\": \"<float>\",\n        \"rowVersion\": \"<dateTime>\"\n    },\n    \"endDate\": \"<dateTime>\",\n    \"startDate\": \"<dateTime>\",\n    \"title\": \"<string>\",\n    \"description\": \"<string>\",\n    \"website\": \"<string>\",\n    \"rowVersion\": \"<dateTime>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/festivals",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"festivals"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"endDate\": \"<dateTime>\",\n \"startDate\": \"<dateTime>\",\n \"title\": \"<string>\",\n \"id\": \"<integer>\",\n \"description\": \"<string>\",\n \"website\": \"<string>\",\n \"rowVersion\": \"<dateTime>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Festival (Empty Body) (Should Fail)",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "58467db9-3d14-491b-8c09-da982a65789a",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "bf50439f-fb34-4101-9bc9-4a68cf400afa",
+								"exec": [
+									"pm.test(\"Status code is 400 Bad Request\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"    pm.expect(pm.response.status).to.be.equal('Bad Request');\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.mimo.festivalforcreation+json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.mimo.festival.full+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/festivals",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"festivals"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"adress\": {\n        \"country\": \"<string>\",\n        \"number\": \"<string>\",\n        \"postalCode\": \"<string>\",\n        \"state\": \"<string>\",\n        \"street\": \"<string>\",\n        \"street2\": \"<string>\",\n        \"latitude\": \"<float>\",\n        \"longitude\": \"<float>\",\n        \"rowVersion\": \"<dateTime>\"\n    },\n    \"endDate\": \"<dateTime>\",\n    \"startDate\": \"<dateTime>\",\n    \"title\": \"<string>\",\n    \"description\": \"<string>\",\n    \"website\": \"<string>\",\n    \"rowVersion\": \"<dateTime>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/festivals",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"festivals"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"endDate\": \"<dateTime>\",\n \"startDate\": \"<dateTime>\",\n \"title\": \"<string>\",\n \"id\": \"<integer>\",\n \"description\": \"<string>\",\n \"website\": \"<string>\",\n \"rowVersion\": \"<dateTime>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Festival (Empty Content-Type) (should fail)",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "34291e03-9036-42b5-b270-7d8914c93697",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "cd48ef51-fe55-464e-a989-898943f224a4",
+								"exec": [
+									"pm.test('Should return Unsupported Media Type 415', function () {\r",
+									"    pm.expect(pm.response.code).to.be.equal(415);\r",
+									"    pm.expect(pm.response.status).to.be.equal('Unsupported Media Type');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"adress\": {\n        \"country\": \"Germany\",\n        \"number\": \"4\",\n        \"postalCode\": \"20212\",\n        \"state\": \"Bremen\",\n        \"street\": \"This Street\",\n        \"street2\": \"\",\n        \"latitude\": \"0\",\n        \"longitude\": \"0\"\n    },\n    \"endDate\": \"{{current_timestamp_plus_three_days}}\",\n    \"startDate\": \"{{current_timestamp}}\",\n    \"title\": \"Create a new fest\",\n    \"description\": \"\",\n    \"website\": \"\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/festivals",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"festivals"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"adress\": {\n        \"country\": \"<string>\",\n        \"number\": \"<string>\",\n        \"postalCode\": \"<string>\",\n        \"state\": \"<string>\",\n        \"street\": \"<string>\",\n        \"street2\": \"<string>\",\n        \"latitude\": \"<float>\",\n        \"longitude\": \"<float>\",\n        \"rowVersion\": \"<dateTime>\"\n    },\n    \"endDate\": \"<dateTime>\",\n    \"startDate\": \"<dateTime>\",\n    \"title\": \"<string>\",\n    \"description\": \"<string>\",\n    \"website\": \"<string>\",\n    \"rowVersion\": \"<dateTime>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/festivals",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"festivals"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"endDate\": \"<dateTime>\",\n \"startDate\": \"<dateTime>\",\n \"title\": \"<string>\",\n \"id\": \"<integer>\",\n \"description\": \"<string>\",\n \"website\": \"<string>\",\n \"rowVersion\": \"<dateTime>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update FestivalFull",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1ed5a1fe-0e67-41d0-9566-c12f4745873c",
+								"exec": [
+									"pm.test(\"Response time must be below 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 204 No Content\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"    pm.expect(pm.response.status).to.be.equal('No Content');\r",
+									"\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type should be application/json-patch+json\", function() {\r",
+									"    pm.request.to.have.header('Content-Type');\r",
+									"    pm.expect(pm.request.headers.get('Content-Type')).to.have.string('application/json-patch+json');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"op\": \"replace\",\r\n    \"path\": \"/address/street2\",\r\n    \"value\": \"Another test Street\"\r\n  },\r\n  {\r\n    \"op\": \"replace\",\r\n    \"path\": \"/description\",\r\n    \"value\": \"A new description\"\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/festivals/:festivalId/adresses/:adressId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"festivals",
+								":festivalId",
+								"adresses",
+								":adressId"
+							],
+							"variable": [
+								{
+									"key": "festivalId",
+									"value": "1",
+									"description": "(Required) "
+								},
+								{
+									"key": "adressId",
+									"value": "1",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"value\": \"<object>\",\n        \"operationType\": \"<integer>\",\n        \"path\": \"<string>\",\n        \"op\": \"<string>\",\n        \"from\": \"<string>\"\n    },\n    {\n        \"value\": \"<object>\",\n        \"operationType\": \"<integer>\",\n        \"path\": \"<string>\",\n        \"op\": \"<string>\",\n        \"from\": \"<string>\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/festivals/:festivalId/adresses/:adressId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"festivals",
+										":festivalId",
+										"adresses",
+										":adressId"
+									],
+									"variable": [
+										{
+											"key": "festivalId"
+										},
+										{
+											"key": "adressId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Update FestivaFull (Non JSONPatch Request Body) (Should fail)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b4e51fda-4194-4a49-8d4c-682cb0713d04",
+								"exec": [
+									"pm.test(\"Status code is 400 Bad Request\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"    pm.expect(pm.response.status).to.be.equal('Bad Request');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Non JSONPatch body should return error\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"The JSON patch document was malformed and could not be parsed.\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"content-type": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"adress\": {\r\n        \"id\": 9,\r\n        \"street\": \"Jinorido\",\r\n        \"street2\": \"Haikusama\",\r\n        \"number\": \"9\",\r\n        \"postalCode\": \"28311\",\r\n        \"state\": \"Bremen\",\r\n        \"country\": \"Germany\",\r\n        \"latitude\": null,\r\n        \"longitude\": null,\r\n        \"rowVersion\": \"2020-05-28T10:27:50.299788\"\r\n    },\r\n    \"id\": 9,\r\n    \"title\": \"Mittelalterfest 10\",\r\n    \"description\": \"Poopybutthole\",\r\n    \"startDate\": \"2020-05-28T19:26:19.468865\",\r\n    \"endDate\": \"2020-06-02T10:26:19.468865\",\r\n    \"website\": null,\r\n    \"rowVersion\": \"2020-05-28T10:27:50.299784\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/festivals/:festivalId/adresses/:adressId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"festivals",
+								":festivalId",
+								"adresses",
+								":adressId"
+							],
+							"variable": [
+								{
+									"description": "(Required) ",
+									"key": "festivalId",
+									"value": "1"
+								},
+								{
+									"description": "(Required) ",
+									"key": "adressId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"value\": \"<object>\",\n        \"operationType\": \"<integer>\",\n        \"path\": \"<string>\",\n        \"op\": \"<string>\",\n        \"from\": \"<string>\"\n    },\n    {\n        \"value\": \"<object>\",\n        \"operationType\": \"<integer>\",\n        \"path\": \"<string>\",\n        \"op\": \"<string>\",\n        \"from\": \"<string>\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/festivals/:festivalId/adresses/:adressId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"festivals",
+										":festivalId",
+										"adresses",
+										":adressId"
+									],
+									"variable": [
+										{
+											"key": "festivalId"
+										},
+										{
+											"key": "adressId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Update FestivalFull (UnexistingFestival) (Should fail)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "337b0f3f-4576-4912-a0ed-7348b835bc6d",
+								"exec": [
+									"pm.test(\"Status code is 404 Not Found\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"    pm.expect(pm.response.status).to.be.equal('Not Found');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"content-type": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"op\": \"replace\",\r\n    \"path\": \"/adress/street2\",\r\n    \"value\": \"Another test Street\"\r\n  },\r\n  {\r\n    \"op\": \"replace\",\r\n    \"path\": \"/description\",\r\n    \"value\": \"A new description\"\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/festivals/:festivalId/adresses/:adressId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"festivals",
+								":festivalId",
+								"adresses",
+								":adressId"
+							],
+							"variable": [
+								{
+									"description": "(Required) ",
+									"key": "festivalId",
+									"value": "1000000"
+								},
+								{
+									"description": "(Required) ",
+									"key": "adressId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"value\": \"<object>\",\n        \"operationType\": \"<integer>\",\n        \"path\": \"<string>\",\n        \"op\": \"<string>\",\n        \"from\": \"<string>\"\n    },\n    {\n        \"value\": \"<object>\",\n        \"operationType\": \"<integer>\",\n        \"path\": \"<string>\",\n        \"op\": \"<string>\",\n        \"from\": \"<string>\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/festivals/:festivalId/adresses/:adressId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"festivals",
+										":festivalId",
+										"adresses",
+										":adressId"
+									],
+									"variable": [
+										{
+											"key": "festivalId"
+										},
+										{
+											"key": "adressId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Update FestivalFull (UnexistingAdress) (Should fail)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "03caade7-bf1c-4227-ad02-036f1b669dd8",
+								"exec": [
+									"pm.test(\"Status code is 404 Not Found\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"    pm.expect(pm.response.status).to.be.equal('Not Found');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"content-type": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"op\": \"replace\",\r\n    \"path\": \"/adress/street2\",\r\n    \"value\": \"Another test Street\"\r\n  },\r\n  {\r\n    \"op\": \"replace\",\r\n    \"path\": \"/description\",\r\n    \"value\": \"A new description\"\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/festivals/:festivalId/adresses/:adressId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"festivals",
+								":festivalId",
+								"adresses",
+								":adressId"
+							],
+							"variable": [
+								{
+									"description": "(Required) ",
+									"key": "festivalId",
+									"value": "1"
+								},
+								{
+									"description": "(Required) ",
+									"key": "adressId",
+									"value": "10000"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"value\": \"<object>\",\n        \"operationType\": \"<integer>\",\n        \"path\": \"<string>\",\n        \"op\": \"<string>\",\n        \"from\": \"<string>\"\n    },\n    {\n        \"value\": \"<object>\",\n        \"operationType\": \"<integer>\",\n        \"path\": \"<string>\",\n        \"op\": \"<string>\",\n        \"from\": \"<string>\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/festivals/:festivalId/adresses/:adressId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"festivals",
+										":festivalId",
+										"adresses",
+										":adressId"
+									],
+									"variable": [
+										{
+											"key": "festivalId"
+										},
+										{
+											"key": "adressId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Update FestivalFull (Empty Body) (Should fail)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3ad802f4-bdf6-4f62-8a87-f6715779758a",
+								"exec": [
+									"pm.test(\"Status code is 400 Bad Request\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"    pm.expect(pm.response.status).to.be.equal('Bad Request');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Empty body should return error\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"A non-empty request body is required.\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"content-type": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/festivals/:festivalId/adresses/:adressId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"festivals",
+								":festivalId",
+								"adresses",
+								":adressId"
+							],
+							"variable": [
+								{
+									"description": "(Required) ",
+									"key": "festivalId",
+									"value": "1"
+								},
+								{
+									"description": "(Required) ",
+									"key": "adressId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"value\": \"<object>\",\n        \"operationType\": \"<integer>\",\n        \"path\": \"<string>\",\n        \"op\": \"<string>\",\n        \"from\": \"<string>\"\n    },\n    {\n        \"value\": \"<object>\",\n        \"operationType\": \"<integer>\",\n        \"path\": \"<string>\",\n        \"op\": \"<string>\",\n        \"from\": \"<string>\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/festivals/:festivalId/adresses/:adressId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"festivals",
+										":festivalId",
+										"adresses",
+										":adressId"
+									],
+									"variable": [
+										{
+											"key": "festivalId"
+										},
+										{
+											"key": "adressId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Update FestivalFull (StartDateAfterEndDate) (Should fail)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "60e650bf-fb82-42a7-ac55-24aa063b09af",
+								"exec": [
+									"pm.test(\"Status code is 400 Bad Request\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"    pm.expect(pm.response.status).to.be.equal('Bad Request');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Empty body should return error\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Start date must happen earlier than the end date.\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"content-type": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"op\": \"replace\",\r\n    \"path\": \"/adress/street2\",\r\n    \"value\": \"Another test Street\"\r\n  },\r\n  {\r\n    \"op\": \"replace\",\r\n    \"path\": \"/description\",\r\n    \"value\": \"A new description\"\r\n  },\r\n  {\r\n    \"op\": \"replace\",\r\n    \"path\": \"/startDate\",\r\n    \"value\": \"2020-06-28T15:26:19.468865\"\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/festivals/:festivalId/adresses/:adressId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"festivals",
+								":festivalId",
+								"adresses",
+								":adressId"
+							],
+							"variable": [
+								{
+									"description": "(Required) ",
+									"key": "festivalId",
+									"value": "1"
+								},
+								{
+									"description": "(Required) ",
+									"key": "adressId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"value\": \"<object>\",\n        \"operationType\": \"<integer>\",\n        \"path\": \"<string>\",\n        \"op\": \"<string>\",\n        \"from\": \"<string>\"\n    },\n    {\n        \"value\": \"<object>\",\n        \"operationType\": \"<integer>\",\n        \"path\": \"<string>\",\n        \"op\": \"<string>\",\n        \"from\": \"<string>\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/festivals/:festivalId/adresses/:adressId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"festivals",
+										":festivalId",
+										"adresses",
+										":adressId"
+									],
+									"variable": [
+										{
+											"key": "festivalId"
+										},
+										{
+											"key": "adressId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Update FestivalFull (DescriptionEqualsTitle) (Should fail)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "22303073-3745-42ac-aee0-275e2d19b043",
+								"exec": [
+									"pm.test(\"Status code is 400 Bad Request\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"    pm.expect(pm.response.status).to.be.equal('Bad Request');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Empty body should return error\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Title must be different from description.\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"content-type": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"op\": \"replace\",\r\n    \"path\": \"/description\",\r\n    \"value\": \"Mittelalterfest 1\"\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/festivals/:festivalId/adresses/:adressId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"festivals",
+								":festivalId",
+								"adresses",
+								":adressId"
+							],
+							"variable": [
+								{
+									"description": "(Required) ",
+									"key": "festivalId",
+									"value": "1"
+								},
+								{
+									"description": "(Required) ",
+									"key": "adressId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"value\": \"<object>\",\n        \"operationType\": \"<integer>\",\n        \"path\": \"<string>\",\n        \"op\": \"<string>\",\n        \"from\": \"<string>\"\n    },\n    {\n        \"value\": \"<object>\",\n        \"operationType\": \"<integer>\",\n        \"path\": \"<string>\",\n        \"op\": \"<string>\",\n        \"from\": \"<string>\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/festivals/:festivalId/adresses/:adressId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"festivals",
+										":festivalId",
+										"adresses",
+										":adressId"
+									],
+									"variable": [
+										{
+											"key": "festivalId"
+										},
+										{
+											"key": "adressId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "/WeatherForecast",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/WeatherForecast",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"WeatherForecast"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/WeatherForecast",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"WeatherForecast"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n {\n  \"date\": \"<dateTime>\",\n  \"temperatureC\": \"<integer>\",\n  \"temperatureF\": \"<integer>\",\n  \"summary\": \"<string>\"\n },\n {\n  \"date\": \"<dateTime>\",\n  \"temperatureC\": \"<integer>\",\n  \"temperatureF\": \"<integer>\",\n  \"summary\": \"<string>\"\n }\n]"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ca35b35e-6bb1-4847-93c1-0eccc62ffbc8",
+				"type": "text/javascript",
+				"exec": [
+					"var baseUrl = pm.environment.get(\"baseUrl\");",
+					"",
+					"pm.collectionVariables.set(\"baseUrl\", baseUrl);",
+					"",
+					"",
+					"pm.sendRequest(baseUrl + '/api//WeatherForecast', function (err, res) {",
+					"    if (err) {",
+					"        console.log(err);",
+					"    } ",
+					"});",
+					"",
+					"var current_timestamp = new Date();",
+					"var current_timestamp_plus_three_days = new Date();",
+					"current_timestamp_plus_three_days.setDate(current_timestamp.getDate() + 4);",
+					"",
+					"console.log(current_timestamp.toISOString());",
+					"console.log(current_timestamp_plus_three_days.toISOString());",
+					"",
+					"postman.setEnvironmentVariable(\"current_timestamp\", current_timestamp.toISOString());",
+					"postman.setEnvironmentVariable(\"current_timestamp_plus_three_days\", current_timestamp_plus_three_days.toISOString());"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "31f76831-82fa-4650-bea1-c09ee5b68aa5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "bed2eb7e-d82c-49be-989b-3fc5c1171695",
+			"key": "baseUrl",
+			"value": "",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

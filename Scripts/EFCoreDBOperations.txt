@@ -1,0 +1,14 @@
+﻿Add New Migration
+dotnet ef migrations add <MIGRATION-NAME> -c FestivalsContext -o Infrastructure/FestivalMigrations
+dotnet ef migrations add <MIGRATION-NAME> -c FestivalsDbContext -o Persistence/Migrations
+
+Update Database
+dotnet ef database update -c FestivalsContext
+dotnet ef database update -c FestivalsDbContext
+
+Revert Last Unapplied Migration
+dotnet ef migrations remove -c CouponContext
+
+Revert Applied Migration (Update DB was Called)
+dotnet ef database update <previous-migration-name> -c FestivalsDbContext
+dotnet ef migrations remove -c FestivalsDbContext
