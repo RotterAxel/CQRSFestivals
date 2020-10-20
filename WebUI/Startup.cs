@@ -49,9 +49,9 @@ namespace WebUI
             {
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "InsuranceAPI - Insurance API",
+                    Title = "CQRSFestivals - Festivals API",
                     Version = "v1",
-                    Description = "Administration of Insurance Data and Tool to get new Customers based on Analytics"
+                    Description = "API for a Festivals platform. Developed with CQRS and MeadiatR"
                 });
             });
         }
@@ -76,7 +76,7 @@ namespace WebUI
             
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Insurance API");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "CQRS Festivals API");
             });
             
             app.UseCors("CorsPolicy");

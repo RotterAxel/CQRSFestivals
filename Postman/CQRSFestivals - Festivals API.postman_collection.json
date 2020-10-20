@@ -1,0 +1,712 @@
+{
+	"info": {
+		"_postman_id": "09fb07f6-68b0-46e7-83a3-287fdfd03ab0",
+		"name": "CQRSFestivals - Festivals API",
+		"description": "API for a Festivals platform. Developed with CQRS and MeadiatR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Festival",
+					"item": [
+						{
+							"name": "{festival Id}",
+							"item": [
+								{
+									"name": "Get Festival",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Festival/:festivalId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Festival",
+												":festivalId"
+											],
+											"variable": [
+												{
+													"id": "95a7cc34-bb37-4b67-aca1-4ce667d17d1c",
+													"key": "festivalId",
+													"value": "<integer>",
+													"type": "string",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Festival/:festivalId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Festival",
+														":festivalId"
+													],
+													"variable": [
+														{
+															"key": "festivalId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"id\": 57992765,\n \"title\": \"ullamco voluptate commodo nostrud\",\n \"description\": \"o\",\n \"startDate\": \"1991-11-10T02:38:52.469Z\",\n \"endDate\": \"1972-07-12T01:10:51.272Z\",\n \"website\": \"mollit ut\",\n \"festivalRowVersion\": \"2006-05-11T18:59:07.709Z\",\n \"addressId\": 2444198,\n \"street\": \"in occaec\",\n \"number\": \"pariatur tempor aliquip\",\n \"postalCode\": \"amet magna esse\",\n \"state\": \"est dolor\",\n \"country\": \"id occaecat esse ex elit\",\n \"addressRowVersion\": \"1954-12-02T07:44:17.647Z\"\n}"
+										},
+										{
+											"name": "Bad Request",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Festival/:festivalId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Festival",
+														":festivalId"
+													],
+													"variable": [
+														{
+															"key": "festivalId"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"type\": \"id laborum nulla irure\",\n \"title\": \"deserunt enim Duis culpa\",\n \"status\": -6103652,\n \"detail\": \"anim cillum sint aliqua\",\n \"instance\": \"in exercitation\"\n}"
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Festival/:festivalId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Festival",
+														":festivalId"
+													],
+													"variable": [
+														{
+															"key": "festivalId"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"type\": \"id laborum nulla irure\",\n \"title\": \"deserunt enim Duis culpa\",\n \"status\": -6103652,\n \"detail\": \"anim cillum sint aliqua\",\n \"instance\": \"in exercitation\"\n}"
+										}
+									]
+								},
+								{
+									"name": "/api/Festival/:festivalId",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"festivalId\": \"<integer>\",\n    \"title\": \"<string>\",\n    \"description\": \"<string>\",\n    \"startDate\": \"<dateTime>\",\n    \"endDate\": \"<dateTime>\",\n    \"website\": \"<string>\",\n    \"rowVersion\": \"<dateTime>\"\n}",
+											"options": {
+												"raw": {}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Festival/:festivalId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Festival",
+												":festivalId"
+											],
+											"variable": [
+												{
+													"id": "d8ca75fe-0fb4-4427-82af-d78e493c1766",
+													"key": "festivalId",
+													"value": "<integer>",
+													"type": "string",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"festivalId\": \"<integer>\",\n    \"title\": \"<string>\",\n    \"description\": \"<string>\",\n    \"startDate\": \"<dateTime>\",\n    \"endDate\": \"<dateTime>\",\n    \"website\": \"<string>\",\n    \"rowVersion\": \"<dateTime>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Festival/:festivalId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Festival",
+														":festivalId"
+													],
+													"variable": [
+														{
+															"key": "festivalId"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"type\": \"id laborum nulla irure\",\n \"title\": \"deserunt enim Duis culpa\",\n \"status\": -6103652,\n \"detail\": \"anim cillum sint aliqua\",\n \"instance\": \"in exercitation\"\n}"
+										},
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"festivalId\": \"<integer>\",\n    \"title\": \"<string>\",\n    \"description\": \"<string>\",\n    \"startDate\": \"<dateTime>\",\n    \"endDate\": \"<dateTime>\",\n    \"website\": \"<string>\",\n    \"rowVersion\": \"<dateTime>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Festival/:festivalId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Festival",
+														":festivalId"
+													],
+													"variable": [
+														{
+															"key": "festivalId"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Bad Request",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"festivalId\": \"<integer>\",\n    \"title\": \"<string>\",\n    \"description\": \"<string>\",\n    \"startDate\": \"<dateTime>\",\n    \"endDate\": \"<dateTime>\",\n    \"website\": \"<string>\",\n    \"rowVersion\": \"<dateTime>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Festival/:festivalId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Festival",
+														":festivalId"
+													],
+													"variable": [
+														{
+															"key": "festivalId"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"type\": \"id laborum nulla irure\",\n \"title\": \"deserunt enim Duis culpa\",\n \"status\": -6103652,\n \"detail\": \"anim cillum sint aliqua\",\n \"instance\": \"in exercitation\"\n}"
+										}
+									]
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Get Festivals",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/Festival",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Festival"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Festival",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Festival"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"festivals\": [\n  {\n   \"id\": -2011183,\n   \"title\": \"labore velit\",\n   \"startDate\": \"2008-07-28T05:09:23.737Z\",\n   \"endDate\": \"1975-07-22T17:25:27.870Z\",\n   \"website\": \"sit\",\n   \"rowVersion\": \"1950-08-31T17:17:13.769Z\"\n  },\n  {\n   \"id\": 85244897,\n   \"title\": \"labore non\",\n   \"startDate\": \"2009-04-12T18:28:41.333Z\",\n   \"endDate\": \"1952-05-31T18:36:15.458Z\",\n   \"website\": \"velit irure ut\",\n   \"rowVersion\": \"1985-12-15T14:33:05.394Z\"\n  }\n ]\n}"
+								}
+							]
+						},
+						{
+							"name": "/api/Festival",
+							"request": {
+								"method": "HEAD",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/Festival",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Festival"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "HEAD",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Festival",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Festival"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"festivals\": [\n  {\n   \"id\": -51267621,\n   \"title\": \"labore commodo occaecat incididunt\",\n   \"startDate\": \"1953-10-03T23:07:28.459Z\",\n   \"endDate\": \"1999-11-26T00:21:17.546Z\",\n   \"website\": \"Excepteur\",\n   \"rowVersion\": \"1965-07-11T22:48:14.889Z\"\n  },\n  {\n   \"id\": -34387657,\n   \"title\": \"proident ut ad aliquip anim\",\n   \"startDate\": \"2011-04-08T17:46:45.186Z\",\n   \"endDate\": \"1991-05-31T09:45:35.178Z\",\n   \"website\": \"ea\",\n   \"rowVersion\": \"1956-05-10T19:24:23.111Z\"\n  }\n ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Create Festival",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"<string>\",\n    \"description\": \"<string>\",\n    \"startDate\": \"<dateTime>\",\n    \"endDate\": \"<dateTime>\",\n    \"website\": \"<string>\",\n    \"festivalRowVersion\": \"<dateTime>\",\n    \"street\": \"<string>\",\n    \"number\": \"<string>\",\n    \"postalCode\": \"<string>\",\n    \"state\": \"<string>\",\n    \"country\": \"<string>\",\n    \"addressRowVersion\": \"<dateTime>\"\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Festival",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Festival"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"<string>\",\n    \"description\": \"<string>\",\n    \"startDate\": \"<dateTime>\",\n    \"endDate\": \"<dateTime>\",\n    \"website\": \"<string>\",\n    \"festivalRowVersion\": \"<dateTime>\",\n    \"street\": \"<string>\",\n    \"number\": \"<string>\",\n    \"postalCode\": \"<string>\",\n    \"state\": \"<string>\",\n    \"country\": \"<string>\",\n    \"addressRowVersion\": \"<dateTime>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Festival",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Festival"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"<string>\",\n    \"description\": \"<string>\",\n    \"startDate\": \"<dateTime>\",\n    \"endDate\": \"<dateTime>\",\n    \"website\": \"<string>\",\n    \"festivalRowVersion\": \"<dateTime>\",\n    \"street\": \"<string>\",\n    \"number\": \"<string>\",\n    \"postalCode\": \"<string>\",\n    \"state\": \"<string>\",\n    \"country\": \"<string>\",\n    \"addressRowVersion\": \"<dateTime>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Festival",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Festival"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"type\": \"id laborum nulla irure\",\n \"title\": \"deserunt enim Duis culpa\",\n \"status\": -6103652,\n \"detail\": \"anim cillum sint aliqua\",\n \"instance\": \"in exercitation\"\n}"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "GetNormalUser Keycloak Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a436c7bb-d60b-478b-8ebb-ce682a99b5e4",
+										"exec": [
+											"var jsonResponse = pm.response.json();\r",
+											"\r",
+											"pm.environment.set(\"Normal_Token\", jsonResponse.access_token);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "normaluser",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "client_id",
+											"value": "postman",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "insurance-api-access",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "client_secret",
+											"value": "{{Postman Secret}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{keycloakUrl}}/auth/realms/Insurance/protocol/openid-connect/token",
+									"host": [
+										"{{keycloakUrl}}"
+									],
+									"path": [
+										"auth",
+										"realms",
+										"Insurance",
+										"protocol",
+										"openid-connect",
+										"token"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAdminUser Keycloak Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "d8072b9a-0d4b-4e48-a638-d3c4c62e55cb",
+										"exec": [
+											"var jsonResponse = pm.response.json();\r",
+											"\r",
+											"pm.environment.set(\"Admin_Token\", jsonResponse.access_token);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "insurance_admin",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "client_id",
+											"value": "postman",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "insurance-api-access",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "client_secret",
+											"value": "{{Postman Secret}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{keycloakUrl}}/auth/realms/Insurance/protocol/openid-connect/token",
+									"host": [
+										"{{keycloakUrl}}"
+									],
+									"path": [
+										"auth",
+										"realms",
+										"Insurance",
+										"protocol",
+										"openid-connect",
+										"token"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "/api/WeatherForecast",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/WeatherForecast",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"WeatherForecast"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/WeatherForecast",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"WeatherForecast"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"date\": \"2007-04-28T17:40:55.729Z\",\n  \"temperatureC\": 30290433,\n  \"temperatureF\": 33471661,\n  \"summary\": \"voluptate deserunt quis\"\n },\n {\n  \"date\": \"2000-10-13T12:11:38.920Z\",\n  \"temperatureC\": -40070353,\n  \"temperatureF\": 7855859,\n  \"summary\": \"irure quis ad Ut\"\n }\n]"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"variable": [
+		{
+			"id": "baseUrl",
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

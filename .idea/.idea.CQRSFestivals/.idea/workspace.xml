@@ -9,6 +9,15 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
     <select>
       <path>
@@ -20,7 +29,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="016dd8aa-07f9-4903-a690-dd962e19e1f8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CQRSFestivals/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CQRSFestivals/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CQRSFestivals/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CQRSFestivals/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Postman/DEV_CQRSInsurcance.postman_environment.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Postman/InsuranceAPI - Insurance API.postman_collection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebUI/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebUI/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +40,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="729c8a23-7b6c-4b11-886e-83c30b0e406d" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://E:/CodingProjects/CQRSFestivals/WebUI/Startup.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/WebUI/Startup.cs" />
+      </list>
+    </option>
   </component>
   <component name="ProjectId" id="1j8tKLmhVGhhhba6qfXYaN90Tgb" />
   <component name="ProjectViewState">
@@ -39,8 +69,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.WebUI: IIS Express">
+  <component name="RunManager" selected=".NET Launch Settings Profile.WebUI: Insurance.API">
     <configuration name="WebUI: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/WebUI/WebUI.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
@@ -82,6 +118,7 @@
       <updated>1603197481863</updated>
       <workItem from="1603197484312" duration="168000" />
       <workItem from="1603197657351" duration="89000" />
+      <workItem from="1603197900500" duration="2793000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1603197688071</created>
@@ -90,7 +127,28 @@
       <option name="project" value="LOCAL" />
       <updated>1603197688071</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial">
+      <created>1603197921246</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603197921246</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add Readme">
+      <created>1603197993299</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603197993299</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Removed unnecessary Postman files">
+      <created>1603198506843</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603198506843</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,12 +183,24 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial" />
+    <MESSAGE value="Initial" />
+    <MESSAGE value="Add Readme" />
+    <MESSAGE value="Removed unnecessary Postman files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unnecessary Postman files" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1603197690971">
+    <state x="4254" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603198357122">
+      <screen x="3840" y="0" width="1920" height="1040" />
+    </state>
+    <state x="4254" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/3840.0.1920.1040@3840.0.1920.1040" timestamp="1603198357122" />
+    <state x="1142" y="613" key="Github.Dialog.Accounts.Choose" timestamp="1603197998509">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400/3840.0.1920.1040@0.0.2560.1400" timestamp="1603197690971" />
+    <state x="1142" y="613" key="Github.Dialog.Accounts.Choose/0.0.2560.1400/3840.0.1920.1040@0.0.2560.1400" timestamp="1603197998509" />
+    <state x="4495" y="322" key="Vcs.Push.Dialog.v2" timestamp="1603198508186">
+      <screen x="3840" y="0" width="1920" height="1040" />
+    </state>
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400/3840.0.1920.1040@0.0.2560.1400" timestamp="1603197994968" />
+    <state x="4495" y="322" key="Vcs.Push.Dialog.v2/0.0.2560.1400/3840.0.1920.1040@3840.0.1920.1040" timestamp="1603198508186" />
   </component>
 </project>
